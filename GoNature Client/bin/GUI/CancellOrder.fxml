@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIcon?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ProgressBar?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.paint.RadialGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.text.Font?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="555.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GUI.UnapprovedOrderController">
+	<children>
+		<Label layoutX="14.0" layoutY="64.0" text="We are sorry but there is no place in the park for the current date and time you choose" />
+		<Label layoutX="168.0" layoutY="350.0" text="Please choose one following actions" textFill="#f22929">
+			<font>
+				<Font name="System Bold Italic" size="15.0" />
+			</font>
+		</Label>
+		<Button fx:id="enterWaitingList" layoutX="168.0" layoutY="400.0" mnemonicParsing="false" onAction="#WhenClickEnterWaitingListBtn" prefWidth="252.0" text="Enter to a waiting list for this order" />
+		<Button fx:id="ShowAlternativeDates" layoutX="168.0" layoutY="454.0" mnemonicParsing="false" onAction="#WhenClickShowBtn" prefHeight="31.0" prefWidth="252.0" text="Show alternative dates" />
+		<Button fx:id="cancelOrder" layoutX="168.0" layoutY="512.0" mnemonicParsing="false" onAction="#WhenClickCancellBtn" prefHeight="29.0" prefWidth="252.0" text="Cancell order " textFill="#ff1b1b">
+			<font>
+				<Font name="Century" size="15.0" />
+			</font>
+		</Button>
+		<Label layoutX="24.0" layoutY="123.0" text="Order information:">
+			<font>
+				<Font name="System Bold" size="18.0" />
+			</font>
+		</Label>
+		<Label layoutX="24.0" layoutY="257.0" text="Date of visit:" />
+		<Label layoutX="24.0" layoutY="217.0" text="Park name" />
+		<Label layoutX="24.0" layoutY="301.0" text="Number of visitors" />
+		<Label fx:id="ParkNameLbl" layoutX="179.0" layoutY="217.0" text="&quot;ParkName&quot;" />
+		<Label fx:id="DateVisitLbl" layoutX="179.0" layoutY="257.0" text="&quot;DateOfVisit&quot;" />
+		<Label fx:id="NumberVisitorsLbl" layoutX="179.0" layoutY="301.0" text="&quot;VisitorsNum&quot;" />
+		<Label layoutX="24.0" layoutY="180.0" text="ID:" />
+		<Label fx:id="IdNumberLbl" layoutX="179.0" layoutY="180.0" text="&quot;IDNUMBER&quot;" />
+      <ProgressBar layoutX="15.0" layoutY="5.0" opacity="0.6" prefHeight="18.0" prefWidth="576.0" progress="0.75" />
+		<Label layoutX="100.0" layoutY="21.0" prefHeight="36.0" prefWidth="387.0" text="Your order can't be completed!" textFill="#ff1c1c">
+			<font>
+				<Font name="System Bold" size="25.0" />
+			</font>
+		</Label>
+      <FontAwesomeIcon iconName="CLOSE" layoutX="543.0" layoutY="44.0" onMouseClicked="#WhenClickExitBtn" size="35">
+         <fill>
+            <RadialGradient centerX="0.5" centerY="0.5" radius="0.8658536585365855">
+               <stops>
+                  <Stop color="#c90e0ecf" />
+                  <Stop color="WHITE" offset="1.0" />
+               </stops>
+            </RadialGradient>
+         </fill>
+      </FontAwesomeIcon>
+	</children>
+</Pane>

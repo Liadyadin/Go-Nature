@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIcon?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ProgressBar?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.paint.RadialGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.text.Font?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="485.0" prefWidth="953.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GUI.AlternativDatesScreenController">
+	<children>
+      <ProgressBar layoutX="3.0" layoutY="8.0" opacity="0.6" prefHeight="18.0" prefWidth="947.0" progress="0.75" />
+		<Label layoutX="30.0" layoutY="72.0" text="ID ">
+			<font>
+				<Font size="18.0" />
+			</font>
+		</Label>
+		<Label fx:id="UserIdLbl" layoutX="83.0" layoutY="72.0" text="User ID">
+			<font>
+				<Font size="16.0" />
+			</font>
+		</Label>
+		<TableView fx:id="AlternativeTable" layoutX="11.0" layoutY="120.0" prefHeight="292.0" prefWidth="765.0">
+			<columns>
+				<TableColumn fx:id="Date" prefWidth="123.0" text="Date" />
+				<TableColumn fx:id="Park" prefWidth="137.0" text="Park" />
+				<TableColumn fx:id="Time" prefWidth="107.0" text="Time" />
+				<TableColumn fx:id="numOfVisit" prefWidth="149.0" text="Number of visitors" />
+				<TableColumn fx:id="Price" prefWidth="123.0" text="Price" />
+			</columns>
+		</TableView>
+		<Button layoutX="20.0" layoutY="427.0" mnemonicParsing="false" onAction="#WhenClickBackBtn" prefHeight="31.0" prefWidth="94.0" text="Back" textFill="#ff1515">
+			<font>
+				<Font name="System Bold Italic" size="16.0" />
+			</font>
+		</Button>
+		<TextArea layoutX="786.0" layoutY="120.0" prefHeight="99.0" prefWidth="144.0" text="The park is open&#10;from 8:00-24:00&#10;every day.&#10;" />
+		<Label layoutX="487.0" layoutY="74.0" text="Choose alternative time:" />
+		<ComboBox fx:id="TimeOfVisitCB" layoutX="664.0" layoutY="69.0" prefHeight="31.0" prefWidth="112.0" />
+		<Button layoutX="786.0" layoutY="69.0" mnemonicParsing="false" onAction="#whenClickSubmitBtn" text="Submit" />
+      <FontAwesomeIcon iconName="CLOSE" layoutX="893.0" layoutY="47.0" onMouseClicked="#WhenClickExitBtn" size="35">
+         <fill>
+            <RadialGradient centerX="0.5" centerY="0.5" radius="0.8658536585365855">
+               <stops>
+                  <Stop color="#c90e0ecf" />
+                  <Stop color="WHITE" offset="1.0" />
+               </stops>
+            </RadialGradient>
+         </fill>
+      </FontAwesomeIcon>
+		<Label alignment="CENTER" contentDisplay="CENTER" layoutX="363.0" layoutY="14.0" text="Alternative dates ">
+			<font>
+				<Font name="System Italic" size="28.0" />
+			</font>
+		</Label>
+	</children>
+</Pane>

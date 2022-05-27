@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIcon?>
+<?import javafx.scene.chart.BarChart?>
+<?import javafx.scene.chart.CategoryAxis?>
+<?import javafx.scene.chart.NumberAxis?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.paint.RadialGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.text.Font?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity"
+	minHeight="-Infinity" minWidth="-Infinity" prefHeight="330.0"
+	prefWidth="929.0" xmlns="http://javafx.com/javafx/8.0.171"
+	xmlns:fx="http://javafx.com/fxml/1"
+	fx:controller="GUI.cancelGraphScreen">
+	<children>
+		<BarChart fx:id="chartBar" layoutY="14.0" prefHeight="246.0"
+			prefWidth="929.0" title="Cancelled Order">
+			<xAxis>
+				<CategoryAxis fx:id="DateX" label="Date" side="BOTTOM" />
+			</xAxis>
+			<yAxis>
+				<NumberAxis fx:id="VisitY" label="Visitors" side="LEFT" />
+			</yAxis>
+		</BarChart>
+		<Button layoutX="14.0" layoutY="260.0" mnemonicParsing="false"
+			onAction="#whenClickExit" text="Exit" textFill="#eb0c0c">
+			<font>
+				<Font name="System Bold Italic" size="22.0" />
+			</font>
+		</Button>
+		<FontAwesomeIcon iconName="CLOSE" layoutX="879.0"
+			layoutY="44.0" onMouseClicked="#WhenClickExitBtn" size="35">
+			<fill>
+				<RadialGradient centerX="0.5" centerY="0.5"
+					radius="0.8658536585365855">
+					<stops>
+						<Stop color="#c90e0ecf" />
+						<Stop color="WHITE" offset="1.0" />
+					</stops>
+				</RadialGradient>
+			</fill>
+		</FontAwesomeIcon>
+	</children>
+</Pane>

@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIcon?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.paint.RadialGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.text.Font?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="485.0" prefWidth="1366.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GUI.ExsitingOrdersScreenController">
+	<children>
+		<Label layoutX="15.0" layoutY="14.0" text="Exisiting orders">
+			<font>
+				<Font size="28.0" />
+			</font>
+		</Label>
+		<Label layoutX="30.0" layoutY="72.0" text="ID ">
+			<font>
+				<Font size="18.0" />
+			</font>
+		</Label>
+		<Label fx:id="userIDFORLbl" layoutX="83.0" layoutY="72.0" text="User ID">
+			<font>
+				<Font size="16.0" />
+			</font>
+		</Label>
+		<TableView fx:id="ExistingOrderTable" layoutX="11.0" layoutY="120.0" prefHeight="292.0" prefWidth="1311.0">
+			<columns>
+				<TableColumn fx:id="IDLbl" prefWidth="123.0" text="Order ID" />
+				<TableColumn fx:id="DateTbl" prefWidth="137.0" text="Date" />
+				<TableColumn fx:id="ParkLbl" prefWidth="107.0" text="Park" />
+				<TableColumn fx:id="TimeLbl" prefWidth="149.0" text="Time" />
+				<TableColumn fx:id="NumOfVisitLbl" prefWidth="123.0" text="Number of visitors" />
+				<TableColumn fx:id="PriceLbl" prefWidth="123.0" text="Price" />
+				<TableColumn fx:id="StatusLbl" prefWidth="123.0" text="Status" />
+				<TableColumn fx:id="CommentsLbl" prefWidth="123.0" text="Comments" />
+
+			</columns>
+		</TableView>
+		<Button layoutX="20.0" layoutY="427.0" mnemonicParsing="false" onAction="#WhenClickBackBtn" prefHeight="31.0" prefWidth="94.0" text="Previous" textFill="#ff1515">
+			<font>
+				<Font name="System Bold Italic" size="16.0" />
+			</font>
+		</Button>
+      <FontAwesomeIcon iconName="CLOSE" layoutX="1322.0" layoutY="38.0" onMouseClicked="#WhenClickExitBtn" size="35">
+         <fill>
+            <RadialGradient centerX="0.5" centerY="0.5" radius="0.8658536585365855">
+               <stops>
+                  <Stop color="#c90e0ecf" />
+                  <Stop color="WHITE" offset="1.0" />
+               </stops>
+            </RadialGradient>
+         </fill>
+      </FontAwesomeIcon>
+	</children>
+</Pane>
