@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIcon?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.paint.RadialGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.text.Font?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GUI.RequestsEnterTravellerController">
+	<children>
+		<TableView fx:id="requestsTravellerTable" layoutX="77.0" layoutY="106.0" prefHeight="216.0" prefWidth="438.0">
+			<columns>
+				<TableColumn fx:id="IDlbl" prefWidth="92.0" text="ID traveller" />
+				<TableColumn fx:id="timeLbl" prefWidth="90.0" text="Request time" />
+				<TableColumn fx:id="numOfVisitLbl" prefWidth="114.0" text="Number of Visitors" />
+			</columns>
+		</TableView>
+		<Label layoutX="21.0" layoutY="69.0" text="Date:" />
+		<Label fx:id="DateLbl" layoutX="55.0" layoutY="69.0" text="thisDate" />
+		<Label layoutX="14.0" layoutY="14.0" text="Request of casual traveller">
+			<font>
+				<Font size="28.0" />
+			</font>
+		</Label>
+		<Button layoutX="38.0" layoutY="347.0" mnemonicParsing="false" onAction="#WhenClickedOnPreviousBtn" text="Previous" textFill="#b20202">
+			<font>
+				<Font name="System Bold" size="14.0" />
+			</font>
+		</Button>
+      <FontAwesomeIcon iconName="CLOSE" layoutX="558.0" layoutY="36.0" onMouseClicked="#WhenClickExitBtn" size="35">
+         <fill>
+            <RadialGradient centerX="0.5" centerY="0.5" radius="0.8658536585365855">
+               <stops>
+                  <Stop color="#c90e0ecf" />
+                  <Stop color="WHITE" offset="1.0" />
+               </stops>
+            </RadialGradient>
+         </fill>
+      </FontAwesomeIcon>
+
+	</children>
+</Pane>

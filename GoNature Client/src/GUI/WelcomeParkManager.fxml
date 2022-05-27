@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIcon?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.paint.RadialGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="691.0" prefWidth="742.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GUI.WelcomeParkManagerController">
+	<children>
+		<Label layoutX="14.0" layoutY="14.0" prefHeight="40.0" prefWidth="141.0" text="Welcome ">
+			<font>
+				<Font size="28.0" />
+			</font>
+		</Label>
+		<Label fx:id="ParkMAnagerName" layoutX="169.0" layoutY="14.0" prefHeight="40.0" prefWidth="272.0" text="&quot;ParkManager Name&quot;">
+			<font>
+				<Font size="28.0" />
+			</font>
+		</Label>
+		<Label layoutX="31.0" layoutY="73.0" text="Park" />
+		<Label fx:id="ParkName" layoutX="96.0" layoutY="73.0" text="&quot;Park Name&quot;" />
+		<Label layoutX="28.0" layoutY="456.0" text="Max visiors in park" />
+		<TextField fx:id="MaxVisitorsField" layoutX="177.0" layoutY="456.0" />
+		<Label layoutX="25.0" layoutY="517.0" onMouseDragOver="#WhenOverGapInPArkForHelp" text="Gap visitors in park" />
+		<TextField fx:id="GapField" layoutX="177.0" layoutY="517.0" />
+		<Label layoutX="28.0" layoutY="584.0" text="Visitors duration " />
+		<TextField fx:id="durationField" layoutX="177.0" layoutY="584.0" />
+		<Button fx:id="duraionbtn" layoutX="406.0" layoutY="584.0" mnemonicParsing="false" onAction="#WhenClickSendChangesBtn" prefHeight="31.0" prefWidth="216.0" text="Send changes to D.Manager" />
+		<Label layoutX="28.0" layoutY="123.0" text="Visitors in park " />
+		<Label fx:id="numberOFVisitorsLabel" layoutX="144.0" layoutY="124.0" text="&quot;Number&quot;" />
+		<Line endX="639.0" layoutX="101.0" layoutY="370.0" startX="-100.0" />
+		<TextArea layoutX="406.0" layoutY="446.0" prefHeight="122.0" prefWidth="296.0" text="You can change the values &#10;and notice them to the &#10;department manager&#10;" />
+		<Button fx:id="SpecialDiscountBTN" layoutX="11.0" layoutY="200.0" mnemonicParsing="false" onAction="#ClickOnSetSpecialDiscount" prefHeight="31.0" prefWidth="339.0" text="Send special discount to D.Manager approval" />
+		<Button fx:id="overallVisitorsReportBTN" layoutX="14.0" layoutY="311.0" mnemonicParsing="false" onAction="#ClickCreateOverallVisitorsReport" prefHeight="31.0" prefWidth="227.0" text="Create visitors report" />
+		<Button fx:id="CreateUsageReportBTN" layoutX="260.0" layoutY="311.0" mnemonicParsing="false" onAction="#WhenClickCreateUsageReportBtn" prefHeight="31.0" prefWidth="227.0" text="Create usage report" />
+		<Button fx:id="SpecialDiscountBTN111" layoutX="504.0" layoutY="311.0" mnemonicParsing="false" onAction="#WhenClickCreateMonthlyIncomeReportBtn" prefHeight="31.0" prefWidth="227.0" text="Create monthly income report" />
+		<Line endX="639.0" layoutX="103.0" layoutY="253.0" startX="-100.0" />
+		<Label layoutX="20.0" layoutY="253.0" prefHeight="40.0" prefWidth="141.0" text="Reports">
+			<font>
+				<Font size="28.0" />
+			</font>
+		</Label>
+		<Label layoutX="13.0" layoutY="386.0" prefHeight="40.0" prefWidth="281.0" text="Change park settings">
+			<font>
+				<Font size="28.0" />
+			</font>
+		</Label>
+		<Button layoutX="28.0" layoutY="646.0" mnemonicParsing="false" onAction="#WhenClickLogOutBtn" text="Log-Out" textFill="#e11212">
+			<font>
+				<Font name="System Bold" size="15.0" />
+			</font>
+		</Button>
+		<Line endX="639.0" layoutX="102.0" layoutY="157.0" startX="-100.0" />
+		<Label layoutX="12.0" layoutY="156.0" prefHeight="40.0" prefWidth="560.0" text="Set special discount ">
+			<font>
+				<Font size="28.0" />
+			</font>
+		</Label>
+      <FontAwesomeIcon iconName="CLOSE" layoutX="703.0" layoutY="36.0" onMouseClicked="#WhenClickExitBtn" size="35">
+         <fill>
+            <RadialGradient centerX="0.5" centerY="0.5" radius="0.8658536585365855">
+               <stops>
+                  <Stop color="#c90e0ecf" />
+                  <Stop color="WHITE" offset="1.0" />
+               </stops>
+            </RadialGradient>
+         </fill>
+      </FontAwesomeIcon>
+	</children>
+</Pane>

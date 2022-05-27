@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIcon?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.paint.RadialGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.text.Font?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="295.0" prefWidth="427.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GUI.OrderCancellReport">
+	<children>
+		<Label layoutX="14.0" layoutY="14.0" text="Cancellation reports">
+			<font>
+				<Font name="System Bold" size="24.0" />
+			</font>
+		</Label>
+		<Button layoutX="176.0" layoutY="198.0" mnemonicParsing="false" onAction="#whenClickCalculateBtn" text="Calculate">
+			<font>
+				<Font name="System Bold Italic" size="15.0" />
+			</font>
+		</Button>
+		<Button layoutX="256.0" layoutY="253.0" mnemonicParsing="false" onAction="#WhenClickClearBtn" prefHeight="31.0" prefWidth="157.0" text="Clear graph data" textFill="#ff1212">
+			<font>
+				<Font name="System Bold Italic" size="15.0" />
+			</font>
+		</Button>
+		<Button layoutX="14.0" layoutY="253.0" mnemonicParsing="false" onAction="#WhenClickBackBtn" prefHeight="31.0" prefWidth="105.0" text="Back" textFill="#f20c0c">
+			<font>
+				<Font name="Arial Bold" size="15.0" />
+			</font>
+		</Button>
+		<Label layoutX="14.0" layoutY="93.0" text="Month">
+			<font>
+				<Font size="19.0" />
+			</font>
+		</Label>
+		<ComboBox fx:id="MonthCb" layoutX="113.0" layoutY="91.0" prefWidth="150.0" />
+		<Label layoutX="14.0" layoutY="151.0" text="Year">
+			<font>
+				<Font size="19.0" />
+			</font>
+		</Label>
+		<ComboBox fx:id="YearCb" layoutX="113.0" layoutY="150.0" prefWidth="150.0" />
+      <FontAwesomeIcon iconName="CLOSE" layoutX="385.0" layoutY="39.0" onMouseClicked="#WhenClickExitBtn" size="35">
+         <fill>
+            <RadialGradient centerX="0.5" centerY="0.5" radius="0.8658536585365855">
+               <stops>
+                  <Stop color="#c90e0ecf" />
+                  <Stop color="WHITE" offset="1.0" />
+               </stops>
+            </RadialGradient>
+         </fill>
+      </FontAwesomeIcon>
+      <FontAwesomeIcon iconName="QUESTION" layoutX="357.0" layoutY="35.0" onMouseClicked="#WhenClickInformationBtn" size="25">
+         <fill>
+            <RadialGradient centerX="0.6931818181818181" centerY="0.5" radius="0.8292682926829269">
+               <stops>
+                  <Stop color="#0a14a6db" />
+                  <Stop color="WHITE" offset="1.0" />
+               </stops>
+            </RadialGradient>
+         </fill></FontAwesomeIcon>
+	</children>
+</Pane>

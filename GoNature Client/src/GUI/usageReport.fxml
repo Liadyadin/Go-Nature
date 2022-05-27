@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIcon?>
+<?import javafx.scene.chart.CategoryAxis?>
+<?import javafx.scene.chart.LineChart?>
+<?import javafx.scene.chart.NumberAxis?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.paint.RadialGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="560.0" prefWidth="687.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GUI.usageReportController">
+	<children>
+		<Label layoutX="24.0" layoutY="25.0" text="Usage reports">
+			<font>
+				<Font name="System Bold" size="21.0" />
+			</font>
+		</Label>
+		<Label layoutX="29.0" layoutY="91.0" text="Month" />
+		<Label layoutX="306.0" layoutY="92.0" text="Year" />
+		<ComboBox fx:id="monthCB" layoutX="86.0" layoutY="87.0" prefWidth="150.0" />
+		<ComboBox fx:id="yearCB" layoutX="355.0" layoutY="86.0" prefWidth="150.0" />
+		<Button fx:id="PreviousBtn" layoutX="26.0" layoutY="158.0" mnemonicParsing="false" onAction="#WhenClickPreviousBtn" prefHeight="31.0" prefWidth="120.0" text="Previous" textFill="#c30000">
+			<font>
+				<Font name="System Bold" size="13.0" />
+			</font>
+		</Button>
+		<Line endX="583.0" layoutX="104.0" layoutY="222.0" startX="-104.0" />
+		<Button fx:id="calculateBtn" layoutX="545.0" layoutY="156.0" mnemonicParsing="false" onAction="#WhenClickCralculateBtn" prefHeight="35.0" prefWidth="128.0" text="Calculate">
+			<font>
+				<Font name="System Bold" size="13.0" />
+			</font>
+		</Button>
+		<TableView fx:id="dateofNotfullCapacityTable" layoutX="483.0" layoutY="286.0" prefHeight="200.0" prefWidth="150.0">
+			<columns>
+				<TableColumn fx:id="DateLbl" prefWidth="144.0" text="Date of unfull capacity" />
+			</columns>
+		</TableView>
+		<LineChart fx:id="lineChartimePercent" animated="false" layoutX="47.0" layoutY="275.0" prefHeight="271.0" prefWidth="409.0">
+			<xAxis>
+				<CategoryAxis fx:id="days" animated="false" prefHeight="24.0" prefWidth="349.0" />
+			</xAxis>
+			<yAxis>
+				<NumberAxis fx:id="precent" animated="false" prefHeight="242.0" prefWidth="32.0" side="LEFT" />
+			</yAxis>
+		</LineChart>
+		<FontAwesomeIcon fx:id="EXITBTN" iconName="CLOSE" layoutX="633.0" layoutY="44.0" onMouseClicked="#WhenClickExitBtn" size="35">
+			<fill>
+				<RadialGradient centerX="0.5" centerY="0.5" radius="0.8658536585365855">
+					<stops>
+						<Stop color="#c90e0ecf" />
+						<Stop color="WHITE" offset="1.0" />
+					</stops>
+				</RadialGradient>
+			</fill>
+		</FontAwesomeIcon>
+
+	</children>
+</Pane>

@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity"
+	minHeight="-Infinity" minWidth="-Infinity" prefHeight="225.0"
+	prefWidth="461.0" xmlns="http://javafx.com/javafx/8.0.171"
+	xmlns:fx="http://javafx.com/fxml/1"
+	fx:controller="GUI.parkIsFullController">
+	<children>
+		<Label layoutX="141.0" layoutY="22.0" text="Park is full"
+			textFill="#eb1414">
+			<font>
+				<Font name="System Bold" size="30.0" />
+			</font>
+		</Label>
+		<Label layoutX="27.0" layoutY="104.0" prefHeight="21.0"
+			prefWidth="373.0"
+			text="You can't enter park right now, please try again later" />
+		<Label layoutX="27.0" layoutY="134.0" prefHeight="21.0"
+			prefWidth="177.0" text="Or make a future order" />
+		<Button fx:id="exitBtn" layoutX="14.0" layoutY="174.0"
+			mnemonicParsing="false" onAction="#WhenClickExitBtn" text="Exit"
+			textFill="#e41212">
+			<font>
+				<Font name="System Bold" size="18.0" />
+			</font>
+		</Button>
+		<Button fx:id="newOrderBtn" layoutX="192.0" layoutY="129.0"
+			mnemonicParsing="false" onAction="#WhenClickMakeNewOrderBtn"
+			text="Make New order" textFill="#267c0c">
+			<font>
+				<Font name="System Bold" size="15.0" />
+			</font>
+		</Button>
+	</children>
+</Pane>
