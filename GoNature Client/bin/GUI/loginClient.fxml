@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="335.0" prefWidth="523.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GUI.loginClientController">
+	<children>
+		<Label layoutX="122.0" layoutY="14.0" text="Welcome To GoNaturee">
+			<font>
+				<Font name="Constantia Bold Italic" size="27.0" />
+			</font>
+		</Label>
+		<Button fx:id="BtnConnect" layoutX="421.0" layoutY="286.0" mnemonicParsing="false" onAction="#WhenClickConnectBtn" text="Connect" />
+		<Label layoutX="31.0" layoutY="83.0" text="Please establish your connection" textFill="#681919">
+			<font>
+				<Font name="System Bold" size="17.0" />
+			</font>
+		</Label>
+		<Label layoutX="31.0" layoutY="147.0" text="Enter Ip" />
+		<Label layoutX="31.0" layoutY="200.0" text="Enter port" />
+		<Button layoutX="14.0" layoutY="286.0" mnemonicParsing="false" onAction="#WhenClickExitBtn" text="Exit" />
+		<TextField fx:id="IpLbl" layoutX="157.0" layoutY="142.0" prefHeight="31.0" prefWidth="186.0" text="localhost" />
+		<TextField fx:id="portLbl" layoutX="157.0" layoutY="195.0" prefHeight="31.0" prefWidth="186.0" text="5555" />
+	</children>
+</Pane>
